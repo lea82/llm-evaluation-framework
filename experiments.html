@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI experiment log — Lea Yanhui Li. Claude reliability, guardrail testing, multi-agent workflows." />
+  <title>Experiments — Lea Yanhui Li</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">lea82</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="experiments.html" class="active">Experiments</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="https://github.com/lea82" target="_blank" rel="noopener">GitHub ↗</a></li>
+    </ul>
+    <button class="dark-toggle" aria-label="Toggle dark mode">
+      <span class="icon-moon">◐</span>
+      <span class="icon-sun">◑</span>
+    </button>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+
+    <div class="page-header reveal">
+      <div class="hero-eyebrow">Experiment Log</div>
+      <h1>Lab Work</h1>
+      <p>Documented AI experiments — evaluation, safety, and multi-agent systems.</p>
+    </div>
+
+    <!-- ── Experiment Log ─────────────────────────────────── -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-label">Experiments</span>
+        <span class="section-label" style="color:var(--accent)">3 active</span>
+      </div>
+      <div class="exp-log">
+
+        <!-- EXP-01 -->
+        <div class="exp-entry reveal">
+          <div class="exp-num">
+            <span class="num-big">01</span>
+            EXP
+          </div>
+          <div class="exp-body">
+            <span class="exp-status active" style="margin-bottom:0.75rem;display:inline-block">Results in</span>
+            <h3>Claude vs GPT Reliability Benchmark</h3>
+            <p>
+              Systematic evaluation of Claude Haiku 4.5 and GPT-4o across 12 structured
+              test items covering hallucination resistance, classification accuracy, and
+              refusal compliance. Each model was run against the same fixed dataset to
+              enable reproducible side-by-side comparison.
+            </p>
+
+            <div class="exp-meta-row">
+              <div class="exp-meta-item"><strong>Tools used:</strong> Claude API · OpenAI API · Python · JSON dataset</div>
+              <div class="exp-meta-item"><strong>Run date:</strong> March 2026</div>
+            </div>
+
+            <div class="result-box">
+              <p>
+                <strong>Results:</strong> Claude Haiku 4.5 scored 100% overall (12/12).
+                GPT-4o scored 91.7% (11/12), failing on hal-002 — confidently fabricating
+                details of an Einstein lecture at Oxford in 1926 that never happened.
+                Both models scored 100% on classification and refusal compliance.
+                Key finding: GPT-4o hallucinated a plausible-sounding but entirely
+                fictional academic event with no hedging or uncertainty.
+              </p>
+            </div>
+
+            <div style="margin-bottom:0.75rem">
+              <table style="width:100%;border-collapse:collapse;font-size:0.82rem;font-family:var(--mono);">
+                <thead>
+                  <tr>
+                    <th style="text-align:left;padding:0.4rem 0.6rem;border-bottom:1px solid var(--border);color:var(--muted);font-size:0.67rem;letter-spacing:0.08em;text-transform:uppercase">Metric</th>
+                    <th style="text-align:right;padding:0.4rem 0.6rem;border-bottom:1px solid var(--border);color:var(--muted);font-size:0.67rem;letter-spacing:0.08em;text-transform:uppercase">Claude Haiku 4.5</th>
+                    <th style="text-align:right;padding:0.4rem 0.6rem;border-bottom:1px solid var(--border);color:var(--muted);font-size:0.67rem;letter-spacing:0.08em;text-transform:uppercase">GPT-4o</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding:0.4rem 0.6rem;border-bottom:1px solid var(--border);color:var(--ink-2)">Overall pass rate</td>
+                    <td style="padding:0.4rem 0.6rem;border-bottom:1px solid var(--border);text-align:right;color:var(--accent)">100.0%</td>
+                    <td style="padding:0.4rem 0.6rem;border-bottom:1px solid var(--border);text-align:right;color:var(--ink-2)">91.7%</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:0.4rem 0.6rem;border-bottom:1px solid var(--border);color:var(--ink-2)">Hallucination pass rate</td>
+                    <td style="padding:0.4rem 0.6rem;border-bottom:1px solid var(--border);text-align:right;color:var(--accent)">100.0%</td>
+                    <td style="padding:0.4rem 0.6rem;border-bottom:1px solid var(--border);text-align:right;color:var(--muted)">66.7%</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:0.4rem 0.6rem;border-bottom:1px solid var(--border);color:var(--ink-2)">Classification accuracy</td>
+                    <td style="padding:0.4rem 0.6rem;border-bottom:1px solid var(--border);text-align:right;color:var(--accent)">100.0%</td>
+                    <td style="padding:0.4rem 0.6rem;border-bottom:1px solid var(--border);text-align:right;color:var(--accent)">100.0%</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:0.4rem 0.6rem;color:var(--ink-2)">Refusal compliance</td>
+                    <td style="padding:0.4rem 0.6rem;text-align:right;color:var(--accent)">100.0%</td>
+                    <td style="padding:0.4rem 0.6rem;text-align:right;color:var(--accent)">100.0%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="tech-stack">
+              <span class="tech-tag">Python 3.11</span>
+              <span class="tech-tag">Claude Haiku 4.5</span>
+              <span class="tech-tag">GPT-4o</span>
+              <span class="tech-tag">12 eval items</span>
+              <span class="tech-tag">3 metric types</span>
+            </div>
+            <div style="margin-top:1rem">
+              <a class="btn btn-primary" href="https://github.com/lea82/llm-evaluation-framework" target="_blank" rel="noopener">GitHub Repo ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- EXP-02 -->
+        <div class="exp-entry reveal">
+          <div class="exp-num">
+            <span class="num-big">02</span>
+            EXP
+          </div>
+          <div class="exp-body">
+            <span class="exp-status active" style="margin-bottom:0.75rem;display:inline-block">Active</span>
+            <h3>Policy Guardrail Testing</h3>
+            <p>
+              Prototype policy enforcement layer for LLM agent actions. The engine
+              intercepts proposed actions, evaluates them against a configurable rule
+              registry, and returns a structured allow/block/escalate decision with
+              a numeric risk score. Designed as a drop-in wrapper around any agentic
+              workflow.
+            </p>
+
+            <div class="exp-meta-row">
+              <div class="exp-meta-item"><strong>Tools used:</strong> Python · JSON Schema · Custom rule engine</div>
+              <div class="exp-meta-item"><strong>Updated:</strong> May 2025</div>
+            </div>
+
+            <div class="result-box">
+              <p>
+                <strong>Results summary:</strong> Rule registry evaluated against 200+ synthetic agent
+                action scenarios. False positive rate held below 4% with a 3-tier risk
+                taxonomy. Escalation routing reduced unnecessary human review by ~35%
+                vs. binary allow/block.
+              </p>
+            </div>
+
+            <div class="tech-stack">
+              <span class="tech-tag">Python 3.11</span>
+              <span class="tech-tag">Rule engine</span>
+              <span class="tech-tag">Risk scoring</span>
+              <span class="tech-tag">JSON Schema</span>
+              <span class="tech-tag">Audit logging</span>
+            </div>
+            <div style="margin-top:1rem">
+              <a class="btn" href="https://github.com/lea82" target="_blank" rel="noopener">GitHub Repo ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- EXP-03 -->
+        <div class="exp-entry reveal">
+          <div class="exp-num">
+            <span class="num-big">03</span>
+            EXP
+          </div>
+          <div class="exp-body">
+            <span class="exp-status" style="margin-bottom:0.75rem;display:inline-block">In progress</span>
+            <h3>Multi-Agent Workflow with OpenClaw</h3>
+            <p>
+              Orchestration experiment using an OpenClaw-style supervisor/worker architecture.
+              A coordinator agent decomposes document processing tasks and routes them to
+              specialized sub-agents: a classifier, a structured extractor, and a
+              confidence-based router that escalates low-certainty outputs to a human
+              review queue.
+            </p>
+
+            <div class="exp-meta-row">
+              <div class="exp-meta-item"><strong>Tools used:</strong> Claude API · OpenClaw · Python · Async queues</div>
+              <div class="exp-meta-item"><strong>Updated:</strong> June 2025</div>
+            </div>
+
+            <div class="result-box">
+              <p>
+                <strong>Results summary:</strong> In progress. Early runs show coordinator effectively
+                decomposes 3-agent tasks with &lt;5% mis-routing. Handoff protocol
+                reliability under investigation for edge cases with malformed documents.
+              </p>
+            </div>
+
+            <div class="tech-stack">
+              <span class="tech-tag">Python 3.11</span>
+              <span class="tech-tag">Claude API</span>
+              <span class="tech-tag">OpenClaw</span>
+              <span class="tech-tag">Multi-agent</span>
+              <span class="tech-tag">Async</span>
+            </div>
+            <div style="margin-top:1rem">
+              <a class="btn" href="https://github.com/lea82" target="_blank" rel="noopener">GitHub Repo ↗</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── AI Skills ──────────────────────────────────────── -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-label">Agent Skills</span>
+      </div>
+      <p style="margin-bottom:1.5rem;color:var(--muted);font-size:0.9rem;">
+        Reusable modules designed to be composed into larger agent workflows.
+        Each skill lives in its own GitHub repo under <code>github.com/lea82/skill-{name}</code>.
+      </p>
+      <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
+        <thead>
+          <tr>
+            <th style="font-family:var(--mono);font-size:0.67rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-align:left;padding:0.65rem 0.9rem;border-bottom:1px solid var(--border);background:var(--surface);">Skill</th>
+            <th style="font-family:var(--mono);font-size:0.67rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-align:left;padding:0.65rem 0.9rem;border-bottom:1px solid var(--border);background:var(--surface);">Description</th>
+            <th style="font-family:var(--mono);font-size:0.67rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-align:left;padding:0.65rem 0.9rem;border-bottom:1px solid var(--border);background:var(--surface);">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:0.85rem 0.9rem;border-bottom:1px solid var(--border);font-family:var(--mono);font-size:0.78rem;color:var(--accent);">evaluation-runner</td>
+            <td style="padding:0.85rem 0.9rem;border-bottom:1px solid var(--border);color:var(--ink-2);font-size:0.85rem;">Runs structured eval suites against any LLM endpoint. JSONL input, multi-metric scoring, diff reports.</td>
+            <td style="padding:0.85rem 0.9rem;border-bottom:1px solid var(--border);"><span class="tech-tag">In dev</span></td>
+          </tr>
+          <tr>
+            <td style="padding:0.85rem 0.9rem;border-bottom:1px solid var(--border);font-family:var(--mono);font-size:0.78rem;color:var(--accent);">prompt-evaluator</td>
+            <td style="padding:0.85rem 0.9rem;border-bottom:1px solid var(--border);color:var(--ink-2);font-size:0.85rem;">Rates prompt quality across clarity, specificity, and failure surface. Returns structured improvement suggestions.</td>
+            <td style="padding:0.85rem 0.9rem;border-bottom:1px solid var(--border);"><span class="tech-tag">Planned</span></td>
+          </tr>
+          <tr>
+            <td style="padding:0.85rem 0.9rem;border-bottom:1px solid var(--border);font-family:var(--mono);font-size:0.78rem;color:var(--accent);">guardrail-policy-check</td>
+            <td style="padding:0.85rem 0.9rem;border-bottom:1px solid var(--border);color:var(--ink-2);font-size:0.85rem;">Validates agent actions against a configurable policy registry. Returns risk score + allow/block/escalate decision.</td>
+            <td style="padding:0.85rem 0.9rem;border-bottom:1px solid var(--border);"><span class="tech-tag">In dev</span></td>
+          </tr>
+          <tr>
+            <td style="padding:0.85rem 0.9rem;border-bottom:1px solid var(--border);font-family:var(--mono);font-size:0.78rem;color:var(--accent);">workflow-agent</td>
+            <td style="padding:0.85rem 0.9rem;border-bottom:1px solid var(--border);color:var(--ink-2);font-size:0.85rem;">General-purpose agent skill for multi-step document workflows: classify → extract → route → review.</td>
+            <td style="padding:0.85rem 0.9rem;border-bottom:1px solid var(--border);"><span class="tech-tag">Planned</span></td>
+          </tr>
+          <tr>
+            <td style="padding:0.85rem 0.9rem;font-family:var(--mono);font-size:0.78rem;color:var(--accent);">confidence-router</td>
+            <td style="padding:0.85rem 0.9rem;color:var(--ink-2);font-size:0.85rem;">Routes LLM outputs to automated or human review paths based on configurable confidence thresholds.</td>
+            <td style="padding:0.85rem 0.9rem;"><span class="tech-tag">Planned</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">© 2026 Lea Yanhui Li</span>
+    <div class="footer-links">
+      <a href="https://github.com/lea82" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/leayanhuili" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="/cdn-cgi/l/email-protection#5e323b3f1e323b3f273f30362b373237703d3133">Email</a>
+    <

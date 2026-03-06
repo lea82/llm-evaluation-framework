@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lea Yanhui Li — AI Systems Architect. Evaluation, Reliability, Safe AI Automation." />
+  <title>Lea Yanhui Li</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+
+<!-- ── Nav ───────────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">lea82</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="experiments.html">Experiments</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="https://github.com/lea82" target="_blank" rel="noopener">GitHub ↗</a></li>
+    </ul>
+    <button class="dark-toggle" aria-label="Toggle dark mode">
+      <span class="icon-moon">◐</span>
+      <span class="icon-sun">◑</span>
+    </button>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+
+    <!-- ── Hero ─────────────────────────────────────────── -->
+    <section class="hero reveal">
+      <div class="hero-badge">Available for collaboration</div>
+      <h1>Lea Yanhui Li</h1>
+      <div class="hero-subtitle">
+        AI Systems Architect
+        <span class="dot">•</span> Evaluation
+        <span class="dot">•</span> Reliability
+        <span class="dot">•</span> Safe AI Automation
+      </div>
+      <div style="margin-bottom:2.25rem">
+        <p class="hero-secondary" style="margin-bottom:0.6rem">
+          I design evaluation, reliability, and governance systems that determine when AI can safely automate complex workflows.
+        </p>
+        <p class="hero-secondary" style="margin-bottom:0.6rem">
+          My work focuses on the infrastructure around AI systems — evaluation frameworks, ground-truth datasets, confidence calibration, and human-in-the-loop decision pipelines.
+        </p>
+        <p class="hero-secondary" style="margin-bottom:0.6rem">
+          I currently work on large-scale AI governance and automation systems at Meta, with prior experience across enterprise platforms at Amazon, Hitachi and Oracle, and as a co-founder of an early-stage startup.
+        </p>
+        <p class="hero-secondary" style="margin-bottom:0">
+          I hold an MBA from UC Berkeley Haas and a master's degree in computer engineering from National University of Singapore.
+        </p>
+      </div>
+      <div class="hero-links">
+        <a class="btn btn-primary" href="projects.html">View Projects →</a>
+        <a class="btn" href="https://github.com/lea82" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn" href="https://linkedin.com/in/leayanhuili" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn" href="/cdn-cgi/l/email-protection#5d31383c1d31383c243c333528343134733e3230">Email</a>
+        <a class="btn" href="assets/resume.pdf" target="_blank">Resume →</a>
+      </div>
+    </section>
+
+    <!-- ── Focus Areas ───────────────────────────────────── -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-label">Focus Areas</span>
+      </div>
+      <div class="focus-grid reveal">
+        <div class="focus-item">
+          <h3>AI Evaluation</h3>
+          <p>Benchmark systems and test harnesses for LLM reliability at production scale.</p>
+        </div>
+        <div class="focus-item">
+          <h3>AI Governance</h3>
+          <p>Policy enforcement layers, risk scoring, and guardrails for autonomous agents.</p>
+        </div>
+        <div class="focus-item">
+          <h3>Safe Automation</h3>
+          <p>Human-in-the-loop thresholds and escalation logic for consequential AI decisions.</p>
+        </div>
+        <div class="focus-item">
+          <h3>LLM Reliability</h3>
+          <p>Confidence scoring, output validation, and regression testing across model versions.</p>
+        </div>
+        <div class="focus-item">
+          <h3>Workflow Orchestration</h3>
+          <p>Multi-agent pipeline design for document processing and review routing.</p>
+        </div>
+        <div class="focus-item">
+          <h3>AI Infrastructure</h3>
+          <p>Evaluation datasets, prompt versioning, and model monitoring at platform scale.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Active AI Experiments ─────────────────────────── -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-label">Active AI Experiments</span>
+        <a class="section-link" href="experiments.html">All experiments →</a>
+      </div>
+      <div class="exp-cards">
+
+        <div class="exp-card reveal">
+          <div class="exp-card-num">EXP-01</div>
+          <h3>Claude vs GPT Reliability Benchmark</h3>
+          <p>Side-by-side evaluation of Claude Haiku 4.5 and GPT-4o across hallucination, classification, and refusal compliance on 12 structured test items.</p>
+          <div style="font-family:var(--mono);font-size:0.7rem;color:var(--muted);margin-bottom:0.5rem;margin-top:0.5rem">
+            Claude 100% · GPT 91.7% — GPT fabricated fictional Einstein lecture (hal-002)
+          </div>
+          <div class="exp-card-footer">
+            <span class="exp-status active">Results in</span>
+            <a class="exp-card-link" href="https://github.com/lea82/llm-evaluation-framework" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-card-num">EXP-02</div>
+          <h3>Guardrail Policy Engine Prototype</h3>
+          <p>Minimal policy enforcement layer for LLM agent actions — rule-based risk scoring with configurable escalation thresholds and structured audit output.</p>
+          <div class="exp-card-footer">
+            <span class="exp-status active">Active</span>
+            <a class="exp-card-link" href="https://github.com/lea82" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-card-num">EXP-03</div>
+          <h3>Multi-Agent Document Workflow</h3>
+          <p>OpenClaw-based orchestration experiment: supervisor agent coordinating classifier, extractor, and human-review-router sub-agents across document batches.</p>
+          <div class="exp-card-footer">
+            <span class="exp-status">In progress</span>
+            <a class="exp-card-link" href="https://github.com/lea82" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Selected Projects ──────────────────────────────── -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-label">Selected Projects</span>
+        <a class="section-link" href="projects.html">All projects →</a>
+      </div>
+      <div class="project-list">
+
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div>
+              <div class="project-tag">Evaluation · LLM</div>
+              <h3><a href="projects.html#llm-eval">LLM Evaluation Framework</a></h3>
+            </div>
+            <a class="btn" href="https://github.com/lea82/llm-evaluation-framework" target="_blank" rel="noopener" style="flex-shrink:0">GitHub ↗</a>
+          <div class="arch-diagram">
+            <div class="arch-row">
+              <span class="arch-node">Dataset (JSONL)</span>
+              <span class="arch-arrow">→</span>
+              <span class="arch-node">Eval Runner</span>
+              <span class="arch-arrow">→</span>
+              <span class="arch-node">Scoring Engine</span>
+              <span class="arch-arrow">→</span>
+              <span class="arch-node">Reliability Dashboard</span>
+            </div>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Claude API</span>
+            <span class="tech-tag">OpenAI API</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">JSONL</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div>
+              <div class="project-tag">Governance · Safety</div>
+              <h3><a href="projects.html#guardrails">AI Guardrails Engine</a></h3>
+            </div>
+            <a class="btn" href="https://github.com/lea82" target="_blank" rel="noopener" style="flex-shrink:0">GitHub ↗</a>
+          </div>
+          <p>Policy enforcement layer for AI agents. Evaluates proposed actions against a configurable policy registry before execution — returns allow / block / escalate with risk score.</p>
+          <div class="arch-diagram">
+            <div class="arch-row">
+              <span class="arch-node">Agent Action</span>
+              <span class="arch-arrow">→</span>
+              <span class="arch-node">Policy Registry</span>
+              <span class="arch-arrow">→</span>
+              <span class="arch-node">Risk Scorer</span>
+              <span class="arch-arrow">→</span>
+              <span class="arch-node">Allow / Block / Escalate</span>
+            </div>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Rule engine</span>
+            <span class="tech-tag">Risk scoring</span>
+            <span class="tech-tag">JSON Schema</span>
+            <span class="tech-tag">Audit logging</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div>
+              <div class="project-tag">Automation · Document AI</div>
+              <h3><a href="projects.html#doc-workflow">Document AI Workflow</a></h3>
+            </div>
+            <a class="btn" href="https://github.com/lea82" target="_blank" rel="noopener" style="flex-shrink:0">GitHub ↗</a>
+          </div>
+          <p>End-to-end pipeline for document classification, confidence scoring, structured extraction, and confidence-based routing to automated processing or human review.</p>
+          <div class="arch-diagram">
+            <div class="arch-row">
+              <span class="arch-node">Ingest</span>
+              <span class="arch-arrow">→</span>
+              <span class="arch-node">Classify + Extract</span>
+              <span class="arch-arrow">→</span>
+              <span class="arch-node">Confidence Check</span>
+              <span class="arch-arrow">→</span>
+              <span class="arch-node">Auto / Review Queue</span>
+            </div>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Claude API</span>
+            <span class="tech-tag">Confidence scoring</span>
+            <span class="tech-tag">Review queue</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── GitHub Repositories ────────────────────────────── -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-label">GitHub Repositories</span>
+        <a class="section-link" href="https://github.com/lea82" target="_blank" rel="noopener">github.com/lea82 →</a>
+      </div>
+      <div class="github-grid" id="github-repos">
+        <!-- Populated by site.js via GitHub API -->
+      </div>
+    </section>
+
+    <!-- ── Recent Writing ─────────────────────────────────── -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-label">Recent Writing</span>
+        <a class="section-link" href="writing.html">All writing →</a>
+      </div>
+      <div class="post-list">
+        <div class="post-item reveal">
+          <div class="post-num">01</div>
+          <div>
+            <div class="post-meta">Essay · Forthcoming</div>
+            <h3><a href="writing.html">Why AI Evaluation Is the Hardest Problem in AI Deployment</a></h3>
+            <p>On the structural reasons evaluation resists standardization, and what that means for teams shipping AI at scale.</p>
+          </div>
+        </div>
+        <div class="post-item reveal">
+          <div class="post-num">02</div>
+          <div>
+            <div class="post-meta">Essay · Forthcoming</div>
+            <h3><a href="writing.html">Designing Safe Automation Thresholds</a></h3>
+            <p>A framework for determining where AI should act autonomously, where it should pause, and where humans must decide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">© 2026 Lea Yanhui Li</span>
+    <div class="footer-links">
+      <a href="https://github.com/lea82" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/leayanhuili" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="/cdn-cgi/l/email-protection#5c30393d1c30393
